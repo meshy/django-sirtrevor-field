@@ -4,6 +4,7 @@ from django.forms import ValidationError
 from django.test import TestCase
 
 from sirtrevor.formfields import SirTrevorField
+from sirtrevor.widgets import SirTrevorWidget
 
 
 class TestCleanEmptyValues(TestCase):
@@ -27,6 +28,12 @@ class TestCleanEmptyValues(TestCase):
 
 
 class TestSirTrevorField(TestCase):
+    """General tests for SirTrevorField."""
     def test_is_field(self):
-        """SirTrevorField is a subclass of JSONField."""
+        """It is a subclass of JSONField."""
         self.assertTrue(issubclass(SirTrevorField, JSONField))
+
+    def test_default_widget(self):
+        """The default widget is SirTrevorWidget."""
+        field = SirTrevorField()
+        self.assertIsInstance(field.widget, SirTrevorWidget)
