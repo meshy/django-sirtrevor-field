@@ -4,6 +4,19 @@
 
 A django field based on ITV's [Sir Trevor JS][sirtrevor] rich content editor.
 
+## TODO
+
+- [x] Based on `django.contrib.postgres.postgres`'s `JSONField`.
+- [x] 100% test coverage enforced by CI.
+- [ ] `SirTrevorWidget`.
+- [ ] Works with `django.forms.Form`.
+- [ ] Works with `django.forms.ModelForm`.
+- [ ] Works with django admin.
+- [ ] On PyPI.
+- [ ] Quickstart docs.
+- [ ] API docs.
+- [ ] CONTRIBUTING.md.
+
 ## Contribution
 ### Testing
 
