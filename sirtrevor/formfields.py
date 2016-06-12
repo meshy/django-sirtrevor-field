@@ -1,5 +1,5 @@
-from django import forms
+from django.contrib.postgres.forms import JSONField
 
 
-class SirTrevorField(forms.Field):
+class SirTrevorField(JSONField):
     """Formfield for SirTrevor json content."""
