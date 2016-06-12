@@ -17,6 +17,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
+    description='A rich content field for django based on SirTrevorJS.',
     include_package_data=True,
     install_requires=[],
     name='django-sirtrevor-field',
