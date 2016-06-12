@@ -4,7 +4,8 @@
 
 A django field based on ITV's [Sir Trevor JS][sirtrevor] rich content editor.
 
-## Testing
+## Contribution
+### Testing
 
 We use [`tox`][tox] to run the tests, and [TravisCI][travis] for continuous
 integration. To run the tests locally, install `tox`:
