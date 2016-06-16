@@ -4,7 +4,7 @@
 
 **Not ready for production!** Library in planning stage. No promises.
 
-A django field based on ITV's [Sir Trevor JS][sirtrevor] rich content editor.
+A django field based on the [Sir Trevor JS][sirtrevor] rich content editor.
 
 ## TODO
 
