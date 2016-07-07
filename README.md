@@ -39,6 +39,6 @@ easier to follow the opinionated code style preferences of this project.
 
 [sirtrevor]: https://madebymany.github.io/sir-trevor-js/
 [tox]: https://pypi.python.org/pypi/tox
-[travis-build]: https://travis-ci.org/meshy/django-sirtrevor-field
-[travis-status-img]: https://travis-ci.org/meshy/django-sirtrevor-field.svg?branch=master
+[travis-build]: https://travis-ci.org/peroshi/django-sirtrevor-field
+[travis-status-img]: https://travis-ci.org/peroshi/django-sirtrevor-field.svg?branch=master
 [travis]: https://travis-ci.org/

@@ -6,7 +6,7 @@ version = '0.0.1'
 
 setup(
     author='Charlie Denton',
-    author_email='charlie@meshy.co.uk',
+    author_email='hello@peroshi.com',
     classifiers=[
         'Development Status :: 1 - Planning',
         'Framework :: Django',
@@ -22,6 +22,6 @@ setup(
     install_requires=[],
     name='django-sirtrevor-field',
     packages=find_packages(exclude=['tests']),
-    url='https://github.com/meshy/django-sirtrevor-field/',
+    url='https://github.com/peroshi/django-sirtrevor-field/',
     version=version,
 )
