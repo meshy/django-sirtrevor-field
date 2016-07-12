@@ -4,7 +4,7 @@
 
 **Not ready for production!** Library in planning stage. No promises.
 
-A django field based on ITV's [Sir Trevor JS][sirtrevor] rich content editor.
+A django field based on the [Sir Trevor JS][sirtrevor] rich content editor.
 
 ## TODO
 
@@ -44,6 +44,6 @@ easier to follow the opinionated code style preferences of this project.
 
 [sirtrevor]: https://madebymany.github.io/sir-trevor-js/
 [tox]: https://pypi.python.org/pypi/tox
-[travis-build]: https://travis-ci.org/meshy/django-sirtrevor-field
-[travis-status-img]: https://travis-ci.org/meshy/django-sirtrevor-field.svg?branch=master
+[travis-build]: https://travis-ci.org/peroshi/django-sirtrevor-field
+[travis-status-img]: https://travis-ci.org/peroshi/django-sirtrevor-field.svg?branch=master
 [travis]: https://travis-ci.org/
