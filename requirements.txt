@@ -1,5 +1,6 @@
 colour-runner
 dj-database-url
 factory-boy~=2.7.0
+needle~=0.3.0
 psycopg2~=2.6.0
 selenium~=2.53.0
