@@ -37,7 +37,7 @@ class TestRunner(ColourRunnerMixin, DiscoverRunner):
     """Enable coloured output for tests."""
 
 
-test_runner = TestRunner(verbosity=1)
+test_runner = TestRunner(verbosity=2)
 failures = test_runner.run_tests(None)
 if failures:
     sys.exit(1)
