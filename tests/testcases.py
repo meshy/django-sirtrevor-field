@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from django.core.urlresolvers import reverse
 from needle.cases import NeedleTestCase
 from needle.driver import NeedlePhantomJS
 
@@ -12,6 +13,7 @@ class PhantomJSDriver(NeedlePhantomJS):
 
 
 class ScreenshotTestCase(NeedleTestCase, StaticLiveServerTestCase):
+    engine_class = 'needle.engines.perceptualdiff_engine.Engine'
     save_baseline = settings.OVERWRITE_SCREENSHOTS
 
     @classmethod
@@ -31,3 +33,20 @@ class ScreenshotTestCase(NeedleTestCase, StaticLiveServerTestCase):
         password = self.driver.find_element_by_id('id_password')
         password.send_keys(user.raw_password)
         self.driver.find_element_by_css_selector('form').submit()
+
+
+def admin_url_name(obj, view_type):
+    meta = obj._meta
+    return 'admin:{app}_{model}_{view}'.format(
+        app=meta.app_label,
+        model=meta.model_name,
+        view=view_type,
+    )
+
+
+def admin_add_url(obj):
+    return reverse(admin_url_name(obj, 'add'))
+
+
+def admin_change_url(obj):
+    return reverse(admin_url_name(obj, 'change'), args=[obj.pk])

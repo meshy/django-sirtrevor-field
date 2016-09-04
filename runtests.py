@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 """From http://stackoverflow.com/a/12260597/400691."""
+import os
 import sys
 
 import dj_database_url
@@ -14,18 +15,37 @@ settings.configure(
         default='postgres:///sirtrevor',
     )},
     INSTALLED_APPS=(
+        'tests',
         'django.contrib.admin',
-        'django.contrib.auth',
+        # contenttypes must preceed auth: http://stackoverflow.com/a/18292090/400691
         'django.contrib.contenttypes',
+        'django.contrib.auth',
         'django.contrib.sessions',
+        'django.contrib.staticfiles',
     ),
-    MIDDLEWARE_CLASSES=(),
+    MIDDLEWARE_CLASSES=(
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ),
+    OVERWRITE_SCREENSHOTS=os.environ.get('OVERWRITE_SCREENSHOTS', False),
     PASSWORD_HASHERS=('django.contrib.auth.hashers.MD5PasswordHasher',),
     ROOT_URLCONF='tests.urls',
     STATIC_URL='/static/',
     TEMPLATES=[{
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'APP_DIRS': True,
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'OPTIONS': {'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+        ]},
     }],
 )
 
