@@ -5,8 +5,6 @@ from .testcases import admin_add_url, admin_change_url, ScreenshotTestCase
 
 class TestAdminIntegration(ScreenshotTestCase):
     """Tests for admin integration of the SirTrevorField."""
-    save_baseline = True
-
     def test_empty(self):
         """Sirtrevor is rendered empty when there's no content."""
         self.login(AdminUserFactory.create())
