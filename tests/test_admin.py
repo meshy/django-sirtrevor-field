@@ -22,4 +22,3 @@ class TestAdminIntegration(ScreenshotTestCase):
         })
         self.driver.get(self.live_server_url + admin_change_url(post))
         self.assertScreenshot('body', 'admin-field-video')
-
