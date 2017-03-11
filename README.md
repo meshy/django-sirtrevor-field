@@ -27,6 +27,10 @@ integration. To run the tests locally, install `tox`:
 
     pip install tox
 
+... and phantomjs:
+
+    npm install phantomjs-prebuilt
+
 and then run:
 
     make test
